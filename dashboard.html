@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control de Ventas</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+    <link rel="stylesheet" href="general-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="menu.html" class="back-to-menu-btn">← Volver al Menú</a>
+        
+        <div class="header-with-counter">
+            <h1>Panel de Control de Ventas Diarias</h1>
+            <div class="sale-counter">
+                Ventas Totales: <span id="total-sales-count">0</span>
+            </div>
+        </div>
+
+        <div class="summary-cards">
+            <div class="card">
+                <h2>Ventas del Día</h2>
+                <p id="daily-sales-total">$0.00</p>
+            </div>
+            <div class="card">
+                <h2>Total de Ventas Semana</h2>
+                <p id="weekly-sales-total">$0.00</p>
+            </div>
+        </div>
+
+        <div class="reports-section">
+            <button id="generate-report-btn">Generar Reporte (PDF/Excel - *Simulado*)</button>
+        </div>
+
+        <div class="chart-section">
+            <h2>Ventas Semanales</h2>
+            <canvas id="weeklySalesChart"></canvas>
+        </div>
+
+        <div class="recent-sales-section">
+            <h2>Últimas 10 Ventas</h2>
+            <table class="sales-table">
+                <thead>
+                    <tr>
+                        <th>ID Venta</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="recent-sales-body">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>
